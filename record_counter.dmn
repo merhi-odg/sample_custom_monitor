@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_0u70g1i" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.5.0">
+  <decision id="Decision_0z4890v" name="Model Test Comparator">
+    <decisionTable id="DecisionTable_06u4y6e" hitPolicy="COLLECT">
+      <input id="Input_1" label="record_count" camunda:inputVariable="record_count">
+        <inputExpression id="InputExpression_1" typeRef="double">
+          <text>record_count</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" label="passes" name="passes" typeRef="boolean" />
+      <output id="OutputClause_1f26zk1" label="reason" name="reason" typeRef="string" />
+      <output id="OutputClause_0pghzdb" label="category" name="category" typeRef="string" />
+      <rule id="DecisionRule_0iuf217">
+        <inputEntry id="UnaryTests_1evwsg8">
+          <text>&lt;200</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_00eqhsw">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0i2s0q8">
+          <text>"fewer than 200 records in dataset"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_14e22b8">
+          <text>"Volumetrics"</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0l1galr">
+        <inputEntry id="UnaryTests_1ew6hvp">
+          <text>&gt;1000</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1gfzjii">
+          <text>false</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0kezcs8">
+          <text>"more than 1000 records in dataset"</text>
+        </outputEntry>
+        <outputEntry id="LiteralExpression_0r9dy8i">
+          <text>"Volumetrics"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0z4890v">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
