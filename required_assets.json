@@ -1,5 +1,6 @@
 [
     {
+        "roleDisplayName":"First Dataset",
         "usage": "INPUT_ASSET",
         "assetRole": "COMPARATOR_DATA",
         "metaData": {
