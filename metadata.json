@@ -1,6 +1,6 @@
 {
     "tags": [],
-    "name": "Sample Csutom Monitor: Count Records",
+    "name": "Sample Custom Monitor: Count Records",
     "description": "Model to count records",
     "modelCategory": "MODEL_MONITORING_MODEL",
     "defaultAssociationRole": "METRICS_MODEL",
